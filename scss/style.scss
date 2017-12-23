@@ -1,0 +1,346 @@
+@import "layout.scss";
+@import "normalize.scss";
+@import "slick.scss";
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Raleway:400,600,700,800,900');
+
+$font-raleway: Raleway,sans-serif;
+$primary-color: #3f3e41;
+$white-color: #fff;
+$orange-color: #fd5c08;
+body{
+	font: 400 16px/1.2 $font-raleway;
+	color:  $primary-color;
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 1200px;
+}
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	text-transform: uppercase;
+}
+p {
+	margin: 0;
+}
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 700;
+	color: $white-color;
+	padding: 10px 20px;
+	border: 1px solid transparent;
+	text-decoration: none;
+	text-transform: uppercase;
+	& span{
+		color: $orange-color;
+		padding-right: 5px;
+	}
+	&:hover {
+		
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	&:focus {
+
+	}
+}
+
+.ba-nav {
+	padding: 30px 10px ;
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	background: rgba(255,255,255,1);
+	&__logo {
+		float: left;
+	}
+	&__menu {
+		float: right;
+		margin: 0;
+		list-style: none;
+		display: flex;
+		//justify-content: space-between;
+		align-items: center;
+	}
+	&__element{
+		text-align: center;
+		margin-left: 30px    ;
+		a{
+			width: 140px;
+			padding: 15px 0;
+			display: block;
+			text-decoration: none;
+			color: #3f3e41;
+			text-transform: uppercase;
+			span{
+				display: block;
+			}
+			&:hover{
+				background-color:  #fd5c08;
+			}
+		}
+	}
+}
+.ba-intro {
+	min-height: 100vh;
+	background: #D3328B url("../img/intro-bg.jpeg") no-repeat 50% /cover;
+	&__position {
+		padding-top: 400px;
+		width: 50%;
+	}
+	&__subtitle {
+		color:  $white-color;
+		font-size: 38px;
+	}
+	&__title {
+		font-size: 100px;
+		color: $white-color;
+		line-height: 0.9;
+	}
+	&__text {
+		color:  $white-color;
+		font-size: 17px;
+		font-weight: 300;
+	}
+}
+
+.ba-cities {
+	background: #fff url("../img/World-map.jpeg") no-repeat 50% /cover;
+	padding-top: 100px;
+	& .ba-button {
+		background:  #545357;
+		float: right;
+		margin-top: 50px;
+		margin-bottom: 100px;
+	}
+	&__about {
+		width: 50%;
+		padding-right: 50px;
+	}
+	&__title {
+		color:  $orange-color;
+		font-size: 80px;
+		font-weight: 800;
+	}
+	&__subtitle {
+		color:  #3f3e41;
+		font-size: 34px;
+		font-weight: 400;
+	}
+	&__text {
+		padding-top: 20px;
+		font-size: 19px;
+		font-weight: 700;
+		float: right;
+		width: 40%;
+	}
+	&-flex {
+		padding-top: 100px;
+		display: flex;
+		flex-direction: column;
+		min-width: 100%;
+
+		&__row {
+			display: flex;
+		}
+		&__img {
+			position: relative;
+			&:hover .ba-overlay{
+				opacity: 1;
+			}
+			&:hover .ba-cities-flex__prise {
+				opacity: 0;
+			}
+		}
+		&__prise {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			color: $white-color;
+			& span {
+				color: $orange-color;
+			}
+			&--big {
+				font-size: 42px;
+				font-weight: 800;
+			}
+		}
+	}
+}
+.ba-overlay {
+	position: absolute;
+	top: 35%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.9);
+	transition: opacity .3s ease-in;
+	opacity: 0;
+	&__body {
+		max-width: 350px;
+		position: absolute;
+		top: 20px;
+		padding-left: 30px;
+	}
+	&__title {
+		font-size: 23px;
+		font-weight: 400;
+		color: $orange-color;
+		line-height: 24px;
+	}
+	&__author {
+		font-size: 34px;
+		font-weight: 700;
+		color: $primary-color;
+		text-transform: uppercase;
+	}
+	&__button {
+		font-size: 14px;
+		font-weight: 700;
+		color: $primary-color;
+		text-decoration: none;
+		& span {
+			color: $orange-color;
+		}
+	}
+}
+
+.ba-offers {
+	background: url("../img/slider-bg1.jpeg") no-repeat 50% /cover;
+	&__title {
+		padding-top: 120px;
+		font-family: 'Kaushan Script', cursive;
+		color:  #ffffff;
+		font-size: 30px;
+		font-weight: 400;
+		text-align: center;
+	}
+}
+.ba-slide {
+	padding-top: 70px;
+	&__subtitle {
+		font-size: 38px;
+		font-weight: 400;
+		text-align: center;
+		color: $white-color;
+	}
+	&__title {
+		font-size: 100px;
+		font-weight: 800;
+		text-align: center;
+		color: $white-color;
+	}
+	&__text {
+		color: $white-color;
+		text-align: center;
+		font-size: 19px;
+		font-weight: 400;
+	}
+}
+.ba-slide-elem {
+	padding: 120px 80px 159px 20px;
+	position: relative;
+	&__prize {
+		background: #3F3E41;
+		padding: 100px 50px 25px 25px;
+		color: $white-color;
+		float: left;
+		max-width: 200px;
+		&--big {
+			color:  $orange-color;
+			font-size: 60px;
+			font-weight: 800;
+		}
+	}
+	& .ba-button {
+		position: absolute;
+		right: 40%;
+		bottom: 25%;
+		background: $primary-color;
+	}
+	&__body {
+		background: rgba( 255, 255, 255, 0.9);
+		padding: 40px 0 80px 30px;
+		float: left;
+		max-width: 500px;
+	}
+	&__title {
+		color:  #fd5c08;
+		font-size: 30px;
+		font-weight: 400;
+	}
+	&__text {
+
+	}
+	&__button {
+		font-size: 14px;
+		font-weight: 700;
+		color: $primary-color;
+		text-decoration: none;
+		padding-top: 30px;
+		& span {
+			color: $orange-color;
+		}
+	}
+	& img {
+		position: absolute;
+		right: 20%;
+		bottom: 25%;
+	}
+}
+.ba-slider-button {
+	display: flex;
+	justify-content: flex-end;
+}
+.ba-slide-prev {
+	background: $primary-color;
+}
+.ba-slide-next {
+	background: $orange-color;
+}
+
+
+.ba-find-more {
+	background: url("../img/about-offers-bg.jpeg") no-repeat 50% /cover;
+	&__title {
+		color:  #fd5c08;
+		font-size: 80px;
+		font-weight: 800;
+		padding: 40px 0 0 0;
+		text-align: center;
+	}
+	&__subtitle {
+		color:  #3f3e41;
+		font-size: 34px;
+		font-weight: 400;
+		padding: 0 0 40px 0;
+		text-align: center;
+	}
+}
+.ba-map {
+	height: 700px;
+}
+//media queries
+@import "media.scss";
