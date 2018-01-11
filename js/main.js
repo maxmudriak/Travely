@@ -2,10 +2,6 @@
     "use strict";
     $( document ).ready(function() {
 
-
-
-
-
         //Slider !!!
         var teamSlider = $('.ba-slider');
         teamSlider.slick({
@@ -17,7 +13,25 @@
             autoplay: true,
             autoplaySpeed: 4000
         });
+        //Slider !!!
+        var joinSlider = $('.ba-join-slider');
+        joinSlider.slick({
+            slide: '.ba-join-slide',
+            arrows: true,
+            prevArrow: '.ba-join-slider-prev',
+            nextArrow: '.ba-join-slider-next',
+            slidesToShow: 1,
+            autoplay: true,
+            autoplaySpeed: 4000
+        });
+
+
+
+
     });
+
+
+
 
 
 
@@ -230,3 +244,6 @@
     }
     window.onload = initMap;
 })(jQuery);
+
+
+
