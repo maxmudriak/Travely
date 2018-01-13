@@ -726,16 +726,9 @@ select {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 100%; }
-    .ba-cities-flex__row {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      margin-bottom: -4px; }
+    width: 100%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
     .ba-cities-flex__img {
       position: relative; }
       .ba-cities-flex__img:hover .ba-overlay {
@@ -1075,3 +1068,144 @@ select {
 
 .ba-hidden {
   display: none; }
+
+@media screen and (max-width: 1200px) {
+  .ba-intro__position {
+    padding-top: 300px; }
+  .ba-cities-flex {
+    padding-left: 60px; }
+    .ba-cities-flex__img {
+      -ms-flex-preferred-size: 320px;
+      flex-basis: 320px; }
+  .ba-slide__subtitle {
+    font-size: 30px; }
+  .ba-slide__title {
+    font-size: 92px; }
+  .ba-slide__text {
+    width: 90%;
+    margin: 0 auto; }
+  .ba-slide-elem {
+    padding-top: 80px;
+    padding-bottom: 120px; }
+    .ba-slide-elem__prize--big {
+      font-size: 50px; }
+    .ba-slide-elem .ba-button {
+      bottom: 90px;
+      right: 32%; }
+    .ba-slide-elem__body {
+      padding: 35px 0 76px 30px; }
+    .ba-slide-elem img {
+      right: 10%; } }
+
+@media screen and (max-width: 1055px) {
+  .ba-cities-flex {
+    padding-left: 20px; }
+    .ba-cities-flex__img {
+      -ms-flex-preferred-size: 300px;
+      flex-basis: 300px; } }
+
+@media screen and (max-width: 960px) {
+  .ba-cities-flex {
+    padding-left: 20px; }
+    .ba-cities-flex__img {
+      -ms-flex-preferred-size: 270px;
+      flex-basis: 270px; }
+  .ba-slide__subtitle {
+    font-size: 25px; }
+  .ba-slide__title {
+    font-size: 80px; }
+  .ba-slide__text {
+    width: 85%;
+    margin: 0 auto; }
+  .ba-slide-elem {
+    padding-top: 80px;
+    padding-bottom: 120px; }
+    .ba-slide-elem__prize {
+      padding: 67px 40px 17px 20px; }
+      .ba-slide-elem__prize--big {
+        font-size: 50px; }
+    .ba-slide-elem .ba-button {
+      bottom: 90px;
+      right: 20%; }
+    .ba-slide-elem__body {
+      padding: 20px 0 30px 25px;
+      max-width: 400px; }
+    .ba-slide-elem img {
+      right: 0; } }
+
+@media screen and (max-width: 870px) {
+  .ba-cities-flex {
+    padding-left: 0; }
+    .ba-cities-flex__img {
+      -ms-flex-preferred-size: auto;
+      flex-basis: auto; } }
+
+@media screen and (max-width: 826px) {
+  .ba-cities-flex {
+    padding-left: 20px; }
+    .ba-cities-flex__img {
+      -ms-flex-preferred-size: 340px;
+      flex-basis: 340px; }
+  .ba-offers__title {
+    padding-top: 80px; }
+  .ba-slide__subtitle {
+    font-size: 25px; }
+  .ba-slide__title {
+    font-size: 80px; }
+  .ba-slide__text {
+    width: 85%;
+    margin: 0 auto; }
+  .ba-slide-elem {
+    padding: 70px 20px 20px 20px; }
+    .ba-slide-elem__prize {
+      padding: 45px 0 30px 20px; }
+      .ba-slide-elem__prize--big {
+        font-size: 45px; }
+    .ba-slide-elem .ba-button {
+      bottom: 0;
+      right: 20%; }
+    .ba-slide-elem__body {
+      padding: 15px 0 17px 20px;
+      max-width: 350px; }
+    .ba-slide-elem img {
+      right: 0;
+      display: none; } }
+
+@media screen and (max-width: 768px) {
+  .ba-nav {
+    width: 60%; }
+    .ba-nav__element {
+      font-weight: 600;
+      font-size: 12px;
+      padding: 10px 0 15px; }
+  .ba-intro__position {
+    width: 80%; }
+  .ba-intro__title {
+    font-size: 90px; }
+  .ba-cities {
+    padding-top: 70px; }
+    .ba-cities__title {
+      font-size: 50px; }
+    .ba-cities__subtitle {
+      font-size: 24px; }
+    .ba-cities__text {
+      width: 80%; }
+  .ba-cities-flex {
+    padding-left: 0; }
+    .ba-cities-flex__img {
+      -ms-flex-preferred-size: auto;
+      flex-basis: auto; } }
+
+@media screen and (max-width: 480px) {
+  .ba-nav {
+    width: 50%; }
+    .ba-nav__menu li {
+      width: 100%; }
+    .ba-nav__element {
+      font-weight: 400;
+      font-size: 10px;
+      padding: 5px 0 10px; }
+  .ba-intro__position {
+    width: 80%; }
+  .ba-intro__title {
+    font-size: 65px; } }

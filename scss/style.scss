@@ -194,13 +194,8 @@ select {
 	&-flex {
 		padding-top: 100px;
 		display: flex;
-		flex-direction: column;
-		min-width: 100%;
-
-		&__row {
-			display: flex;
-			margin-bottom: -4px;
-		}
+		width: 100%;
+		flex-wrap: wrap;
 		&__img {
 			position: relative;
 			&:hover .ba-overlay{
@@ -603,5 +598,7 @@ select {
 .ba-hidden {
 	display: none;
 }
+
+
 //media queries
 @import "media.scss";
